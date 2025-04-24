@@ -1,0 +1,163 @@
+/* Basic body and heading styling */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+h1 {
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+h2 {
+    color: rgb(3, 94, 94);
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Categories Section */
+.categories {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.category-circles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f3abb6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.category-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.category-btn:hover {
+    text-decoration: underline;
+}
+
+.category-circles .circle:hover {
+    background-color: #f08599;
+}
+
+/* Containers for clothing and accessories */
+#containerClothing, #containerAccessories {
+    display: grid;
+    grid-gap: 70px 20px;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+#box {
+    width: 100%;
+    background-color: white;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+}
+
+#box:hover {
+    box-shadow: 1px 6px 3px 0 rgb(185, 185, 185);
+}
+
+#containerClothing img, #containerAccessories img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#details {
+    padding: 0 15px;
+    text-transform: capitalize;
+}
+
+#box a {
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-weight: 100;
+}
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media(max-width: 1070px) {
+    h1 {
+        font-size: 25px;
+    }
+    #containerClothing, #containerAccessories {
+        width: 95%;
+        grid-gap: 10px;
+    }
+}
+
+@media(max-width: 850px) {
+    h1 {
+        width: 80%;
+    }
+    #containerClothing, #containerAccessories {
+        display: grid;
+        grid-gap: 70px 20px;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+    }    
+}
+
+@media(max-width: 650px) {
+    h1 {
+        font-size: 20px;
+    }
+    h1 {
+        width: 90%;
+    }
+    #containerClothing, #containerAccessories {
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px) {
+    h1 {
+        width: 70%;
+    }
+    #containerClothing, #containerAccessories {
+        width: 70%;
+    }
+}
+
+@media(max-width: 505px) {
+    h1 {
+        width: 80%;
+    }
+    #containerClothing, #containerAccessories {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
